@@ -15,7 +15,7 @@ const itemSchema = new Schema({
     type: Number,
   },
   stock: {
-    type: Boolean,
+    type: Number,
   },
   imageUrl: {
     type: String,
