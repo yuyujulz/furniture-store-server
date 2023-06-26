@@ -9,11 +9,11 @@ const fileUploader = require("../config/cloudinary.config");
 
 router.post("/items", fileUploader.single("itemImage"), (req, res, next) => {
     const {
-      title, brand, description, price, stock, user, imageUrl, category, comments
+      title, brand, description, price, stock, user, imageUrl, category, color, comments
     } = req.body;
   
     Item.create({
-      title, brand, description, price, stock, user, imageUrl, category, comments
+      title, brand, description, price, stock, user, imageUrl, category, color, comments
     })
       .then((response) => res.json(response))
       .catch((err) => res.json(err));
@@ -58,6 +58,7 @@ router.post("/items", fileUploader.single("itemImage"), (req, res, next) => {
       user,
       imageUrl,
       category,
+      color,
       comments
     } = req.body;
   
@@ -78,6 +79,7 @@ router.post("/items", fileUploader.single("itemImage"), (req, res, next) => {
         stock: stock,
         user: user,
         category: category,
+        color: color,
         imageUrl: imageUrl,
         comments: comments
       },

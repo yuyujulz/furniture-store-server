@@ -6,22 +6,25 @@ const itemSchema = new Schema({
     required: true,
   },
   brand: {
-    type: String,
+    type: String
   },
   description: {
-    type: String,
+    type: String
   },
   price: {
-    type: Number,
+    type: Number
   },
   stock: {
-    type: Number,
+    type: Number
   },
   imageUrl: {
-    type: String,
+    type: String
   },
   category: {
-    type: String,
+    type: String
+  },
+  color: {
+    type: String
   },
 
   user: { type: Schema.Types.ObjectId, ref: "User" },
